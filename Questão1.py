@@ -1,17 +1,19 @@
 from http.client import OK
-from logging import CRITICAL
+from itertools import starmap
 import math
 import string
 import numpy as np
 
+
 def CriaMatriz(linha, coluna):
-        lista = []
-        for i in range(0, linha):
-            l = []
-            for j in range(0, coluna):
-                l.append(0)
-            lista.append(l)
-        return lista
+    lista = []
+    for i in range(0, linha):
+        l = []
+        for j in range(0, coluna):
+            l.append(0)
+        lista.append(l)
+    return lista
+
 
 def Gauss(A, b):
     for i in range(len(A)):
@@ -37,46 +39,47 @@ def Gauss(A, b):
                 A[k][l] -= multiplicador*A[i][l]
             b[k][0] -= multiplicador*b[i][0]
 
-def Sol(A, b):
-      n = np.size(b)
-      x = np.zeros(n)
 
-      for i in range(n-1, -1, -1):
+def Sol(A, b):
+    n = np.size(b)
+    x = np.zeros(n)
+
+    for i in range(n-1, -1, -1):
         soma = 0
         for j in range(i + 1, n):
             soma += A[i][j] * x[j]
-        if(b[i][0]==0):
-            print("\n\n\n\n\n\nSistema sem solução determinada!!!\n\n\n\n")  
+        if(b[i][0] == 0):
+            print("\n\n\n\n\n\nSistema sem solução determinada!!!\n\n\n\n")
             exit()
         x[i] = (b[i][0] - soma) / A[i][i]
-      return x
+    return x
 
 
 x = int(input('Digite a ordem de sua matriz: '))
 
 y = x+1
-m = []
-A = []
-b = []
-
-
+# m = [[1,2,-1,2],[2,-1,1,3],[1,1,1,6]] Você pode usar esse espaço para inserir manualmente a matriz.
+# Não esqueça de comentar a variável "m" abaixo com um hashtag
 m = CriaMatriz(x, y)
 A = CriaMatriz(x, y-1)
 b = CriaMatriz(x, 1)
 
 for i in range(0, x):
     for j in range(0, y):
-        print("Digite o valor para a linha " + str(i) + " coluna " + str(j))
+        print("\nDigite o valor para a linha " + str(i) + " coluna " + str(j))
         m[i][j] = float(input())
-
 
 for i in range(0, x):
     b[i][0] = m[i][y-1]
     for j in range(0, y-1):
         A[i][j] = m[i][j]
 
+print("\n" * 130 + 'Sua matriz foi computada!\n\n')
 
-menu = input('\n\nEscolha o item da questao!\n Digite "a" ou "b":  ')
+menu = ""
+
+while(menu != 'a' and menu != 'b'):
+    menu = input('\n\nEscolha o item da questao!\n Digite "a" ou "b":  ')
 
 if menu == 'a':
 
@@ -88,39 +91,21 @@ if menu == 'a':
 
         print()
 
-    print('\n************\n\nMatriz A: \n')
-
-    for i in range(0, x):
-        for j in range(0, y-1):
-            print(f'[{A[i][j]}]', end='')
-        print()
-
-    print('\nMatriz b: \n')
-    for i in range(0, x):
-        print(f'[{b[i][0]}]', end='')
-        print()
-
-    print()
-
     Gauss(A, b)
 
-    print('\n************\n\nMatriz A Escalonada: \n')
+    print('\n************************\n\nMatriz Escalonada: \n')
 
     for i in range(0, x):
         for j in range(0, y-1):
             print(f'[{A[i][j]}]', end='')
-        print()
-
-    print('\nMatriz b Escalonada: \n')
-    for i in range(0, x):
         print(f'[{b[i][0]}]', end='')
         print()
 
     print()
 
-if menu=='b':
-    Gauss(A,b)
-    Solucao=Sol(A,b)
+if menu == 'b':
+    Gauss(A, b)
+    Solucao = Sol(A, b)
 
     print("\n" * 130)
     print('\nMatriz digitada:\n')
@@ -132,4 +117,4 @@ if menu=='b':
 
     print("\nSolução do sistema: \n")
     for i in range(len(Solucao)):
-        print("x"+str(i)+" = "+str(Solucao[i])+"\n")  
+        print("x"+str(i)+" = "+str(Solucao[i])+"\n")
