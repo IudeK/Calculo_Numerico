@@ -12,7 +12,7 @@ onde cada elemento da lista é uma lista dos elementos de uma linha de A.<br/> A
 
 9x1 − 2x2 + x3 + 3x4 + x5 = 0<br />
 x1 − 1x2 + 2x3 + 6x4 + x5 = 2<br />
-2x1 − 3x2 + 7x3 + x4 = 1
+2x1 − 3x2 + 7x3 + x4 = 1<br />
 x1 + 6x2 − x3 + 4x4 + 2x5 = 1<br />
 x1 − 2x2 + 2x3 + x4 + 8x5 = 2<br />
 
