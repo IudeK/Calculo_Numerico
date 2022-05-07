@@ -25,6 +25,4 @@ soluções dr(k) < 10−4.<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x − yz − 10 = 0<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2x² − y² + z² + 5 = 0<br />
 
-Encontre uma solução aproximada X(k) do sistema pelo método de Newton até obter ||F(X(k)
-
-)||∞ < 10−4
+Encontre uma solução aproximada X(k) do sistema pelo método de Newton até obter ||F(X(k))||∞ < 10−4
