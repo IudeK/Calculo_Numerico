@@ -17,4 +17,14 @@ onde cada elemento da lista é uma lista dos elementos de uma linha de A.<br/> A
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x1 − 2x2 + 2x3 + x4 + 8x5 = 2<br />
 
 Encontre uma solução aproximada do sistema pelo método de Gauss-Seidel até obter a distância relativa das
-soluções dr(k) < 10−4.
+soluções dr(k) < 10−4.<br />
+
+<h3>3. Considere o sistema</h3><br />
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x² + xy + z² − 12 = 0<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x − yz − 10 = 0<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2x² − y² + z² + 5 = 0<br />
+
+Encontre uma solução aproximada X(k) do sistema pelo método de Newton até obter ||F(X(k)
+
+)||∞ < 10−4
