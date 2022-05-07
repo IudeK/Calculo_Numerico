@@ -1,6 +1,6 @@
   <h1>Calculo Numerico</h1>
 
-1. Considere um sistema linear AX = B de n equações e n variáveis. A matriz A = (aij )n×n pode ser escrita como uma lista<br /><br/>
+<h3>1. Considere um sistema linear AX = B de n equações e n variáveis. A matriz A = (aij )n×n pode ser escrita como uma lista</h3><br /><br/>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A = [[a11, a12, ..., a1n], [a21, a22, ..., a2n], ..., [an1, an2, ..., ann]],<br /> <br />
 onde cada elemento da lista é uma lista dos elementos de uma linha de A.<br/> A matriz B = (bi)n×1 pode ser vista como uma lista B = [b1, b2, ..., bn]. Já a matriz aumentada do sistema é uma matriz M de tamanho n × (n + 1) que também pode ser vista como uma lista<br /> <br />
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; M = [[a11, ..., a1n, b1], [a21, ..., a2n, b2], ..., [an1, ..., ann, bn]]<br /><br /> 
